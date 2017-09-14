@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "com.mhook.MrSFastTranslation"
+        minSdkVersion 14
+        targetSdkVersion 21
+
+        versionCode 50
+        versionName "2.8.2-debug"
+
+        compileOptions {
+          //  sourceCompatibility JavaVersion.VERSION_1_8
+          //  targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    dependencies {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+        provided files('lib/XposedBridgeApi-54.jar')
+    }
+
+
+}

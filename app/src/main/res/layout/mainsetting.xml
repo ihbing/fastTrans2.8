@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_gravity="center">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		android:padding="10dp"
+		android:gravity="center">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="检查环境配置"
+			android:layout_width="wrap_content"/>
+
+		<TextView
+			android:layout_height="1dp"
+			android:text="Text"
+			android:layout_width="match_parent"
+			android:background="#FFFFFF"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:id="@+id/main_textv_show_xposed_active"
+			android:gravity="center"
+			android:textColor="#FC0E00"/>
+
+		<Switch
+			android:id="@+id/main_swh_module_enabled"
+			android:layout_width="match_parent"
+			android:text="启用模块"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="软件图标设置"
+			android:layout_width="wrap_content"/>
+
+		<TextView
+			android:layout_height="1dp"
+			android:text="Text"
+			android:layout_width="match_parent"
+			android:background="#FFFFFF"/>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:text="隐藏应用图标"
+			android:layout_width="match_parent"
+			android:id="@+id/main_swh_hide_icon"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="主题设置"
+			android:layout_width="wrap_content"/>
+
+		<TextView
+			android:layout_height="1dp"
+			android:text="Text"
+			android:layout_width="match_parent"
+			android:background="#FFFFFF"/>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:text="亮主题"
+			android:layout_width="match_parent"
+			android:id="@+id/main_swh_bright_theme_enabled"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="其他设置"
+			android:layout_width="wrap_content"/>
+
+		<TextView
+			android:layout_height="1dp"
+			android:text="Text"
+			android:layout_width="match_parent"
+			android:background="#FFFEFF"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<Button
+					android:layout_height="wrap_content"
+					style="?android:attr/buttonStyleSmall"
+					android:text="设置显示时间"
+					android:layout_width="wrap_content"
+					android:layout_weight="1.0"
+					android:id="@+id/main_btn_setting_show_time"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					style="?android:attr/buttonStyleSmall"
+					android:text="设置显示透明度"
+					android:layout_width="wrap_content"
+					android:layout_weight="1.0"
+					android:id="@+id/main_btn_setting_show_transparency"/>
+
+			</LinearLayout>
+
+			<Spinner
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_weight="1.0"
+				android:id="@+id/main_spinner_select_input"/>
+
+		</LinearLayout>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="开启字符白名单"
+			android:id="@+id/main_swh_white_list_enabled"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:id="@+id/main_linear_white_list"
+			android:gravity="center">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:text="白名单字符:"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center"/>
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center"
+				android:id="@+id/main_edt_white_list"
+				android:layout_weight="1.0"
+				android:hint="多个字符用','分开."/>
+
+			<Button
+				android:layout_height="wrap_content"
+				style="?android:attr/buttonStyleSmall"
+				android:text="保存"
+				android:layout_width="wrap_content"
+				android:id="@+id/main_btn_save_white_list"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="翻译内容含有上面字符的才会翻译！(支持正则)"
+			android:layout_width="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:id="@+id/main_textv_description_white_list"
+			android:layout_gravity="left"/>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="开启字符黑名单"
+			android:id="@+id/main_swh_black_list_enabled"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:id="@+id/main_linear_black_list"
+			android:gravity="center">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:text="黑名单字符:"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center"/>
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center"
+				android:layout_weight="1.0"
+				android:hint="多个字符用','分开."
+				android:id="@+id/main_edt_black_list"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				style="?android:attr/buttonStyleSmall"
+				android:text="保存"
+				android:layout_width="wrap_content"
+				android:id="@+id/main_btn_save_black_list"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="翻译内容不含有上面字符的才会翻译！(支持正则)"
+			android:layout_width="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_gravity="left"
+			android:id="@+id/main_textv_description_black_list"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="开发者"
+			android:layout_width="wrap_content"/>
+
+		<TextView
+			android:layout_height="1dp"
+			android:text="Text"
+			android:layout_width="match_parent"
+			android:background="#FFFEFF"/>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:text="开启调试模式(需root)"
+			android:layout_width="match_parent"
+			android:id="@+id/main_swh_debug_mode_enabled"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_gravity="center">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="查看日志"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center"
+				android:id="@+id/main_btn_show_log"
+				android:layout_weight="1.0"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="加入测试群"
+				android:layout_width="wrap_content"
+				android:id="@+id/main_btn_join_test_group"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:layout_weight="1.0"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="软件说明"
+			android:layout_width="wrap_content"
+			android:layout_gravity="center"/>
+
+		<TextView
+			android:layout_height="1dp"
+			android:text="Text"
+			android:layout_width="match_parent"
+			android:background="#FFFEFF"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/main_textv_description_app"/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="捐赠(支付宝)"
+				android:layout_width="wrap_content"
+				android:id="@+id/main_btn_alipay"
+				android:layout_weight="1.0"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="评分(酷安)"
+				android:layout_width="wrap_content"
+				android:id="@+id/main_btn_open_app_market"
+				android:layout_weight="1.0"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+
