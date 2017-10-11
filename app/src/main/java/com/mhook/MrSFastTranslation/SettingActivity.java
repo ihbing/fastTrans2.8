@@ -772,6 +772,17 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 
 			}
 		};
+		
+		DialogInterface.OnClickListener onClickListenerShareBtn=new DialogInterface.OnClickListener(){
+
+			@Override
+			public void onClick(DialogInterface p1, int p2)
+			{
+
+				transPresenter.onLogAlertShareClicked(mActivity,logStr);
+
+			}
+		};
 
 		ScrollView ScrollView1=new ScrollView(mActivity);
 
@@ -795,8 +806,7 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 
 		ScrollView1.addView(TextView3);
 
-		AlertUtils.DiyViewAlertWithTwoBtn(mActivity,"运行日志",getResources().getDrawable(R.drawable.icon),ScrollView1,"复制",mOnClickListener2,"清除",mOnClickListener3);
-		
+		AlertUtils.DiyViewAlertWithThreeBtn(mActivity,"运行日志",getResources().getDrawable(R.drawable.icon),ScrollView1,"复制",mOnClickListener2,"清除",mOnClickListener3,"分享",onClickListenerShareBtn);
 		
 	}
 

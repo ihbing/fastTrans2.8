@@ -67,6 +67,33 @@ public class AlertUtils
 
 	}
 
+	//带三个按钮的自定义对话框
+	
+	public static void DiyViewAlertWithThreeBtn(Context con,String title,Drawable icon,View view,
+
+											  String positivestr,DialogInterface.OnClickListener positiveclick,
+
+											  String negativestr,DialogInterface.OnClickListener negativeclick,
+											  
+											  String neutralstr,DialogInterface.OnClickListener neutralclick){
+
+		ThreeBtnAlert(con,title,icon,"",view,positivestr,positiveclick,negativestr,negativeclick,neutralstr,neutralclick);
+
+	}
+	
+	public static void DiyViewAlertWithThreeBtn(Context con,String title,View view,
+
+											  String positivestr,DialogInterface.OnClickListener positiveclick,
+
+											  String negativestr,DialogInterface.OnClickListener negativeclick,
+												
+											  String neutralstr,DialogInterface.OnClickListener neutralclick){
+
+		ThreeBtnAlert(con,title,null,"",view,positivestr,positiveclick,negativestr,negativeclick,neutralstr,neutralclick);
+
+	}
+	
+	
 	//一个按钮的对话框
 
 	public static void OneBtnAlert(Context con,String title,String msg,String positivestr,DialogInterface.OnClickListener positiveclick){

@@ -1,6 +1,7 @@
 package com.mhook.MrSFastTranslation.mvp;
 import android.view.*;
 import android.widget.*;
+import android.content.*;
 
 public interface TransPresenter
 {
@@ -14,6 +15,8 @@ public interface TransPresenter
 	void onLogAlertCopyClicked(String logStr);
 	
 	void onLogAlertClearClicked();
+	
+	void onLogAlertShareClicked(Context con,String logStr);
 	
 	void initSettings();
 	

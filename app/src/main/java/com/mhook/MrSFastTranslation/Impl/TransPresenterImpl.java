@@ -4,9 +4,22 @@ import android.view.*;
 import android.widget.*;
 import com.mhook.MrSFastTranslation.*;
 import com.mhook.MrSFastTranslation.Utils.*;
+import android.content.*;
 
 public class TransPresenterImpl implements TransPresenter
 {
+
+	@Override
+	public void onLogAlertShareClicked(Context con,String logStr)
+	{
+		// TODO: Implement this method
+		
+		JsonRW.JObject jObect=JsonRW.JObject.getInstance();
+
+		IntentUtils.OpenShare(con,logStr+"\nJSON settings:"+jObect.toString());
+		
+	}
+
 
 	@Override
 	public void setShowTransparency(int transparency)
