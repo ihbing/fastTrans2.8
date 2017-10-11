@@ -60,24 +60,10 @@ public class AppUtils
 	
 	public static Boolean killApp(Context con,String pkgname){
 		
-		try { // get superuser
-			Process su = Runtime.getRuntime().exec("su");
-			if (su == null)
-				return false;
-			DataOutputStream os = new DataOutputStream(su.getOutputStream());
-			os.writeBytes("am force-stop " + pkgname+ "\n");
-			os.writeBytes("exit\n");
-			su.waitFor();
-			os.close();
+		ShellUtils.CommandResult execResult=  ShellUtils.execCommand("am force-stop " + pkgname+ "\n",true,true);
 
-		} catch (Throwable e) {
-			e.printStackTrace();
-
-			return false;
-
-		}
-
-		return true;
+		if(execResult.result==0)return true;else return false;
+		
 		
 	}
 	
@@ -85,24 +71,9 @@ public class AppUtils
 
 	public static Boolean reStartApp(Context con,String pkgname){
 
-		try { // get superuser
-			Process su = Runtime.getRuntime().exec("su");
-			if (su == null)
-				return false;
-			DataOutputStream os = new DataOutputStream(su.getOutputStream());
-			os.writeBytes("am start -S " + pkgname +"/"+GetEntryActivityName(con,pkgname)+ "\n");
-			os.writeBytes("exit\n");
-			su.waitFor();
-			os.close();
-			
-		} catch (Throwable e) {
-			e.printStackTrace();
-			
-			return false;
-			
-		}
+		ShellUtils.CommandResult execResult=  ShellUtils.execCommand("am start -S " + pkgname +"/"+GetEntryActivityName(con,pkgname)+ "\n",true,true);
 
-		return true;
+		if(execResult.result==0)return true;else return false;
 		
 	}
 

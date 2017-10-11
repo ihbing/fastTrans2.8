@@ -42,7 +42,7 @@ public class TransPresenterImpl implements TransPresenter
 		
 		if(transModel.rebootOnInput()){
 			
-			transView.showInfo("输入法已停止,请手动重启!");
+			transView.showInfo("输入法已重启！");
 			
 			transModel.saveSettings();
 			
@@ -50,7 +50,7 @@ public class TransPresenterImpl implements TransPresenter
 			
 		}
 		
-		transView.showInfo("输入法停止失败！");
+		transView.showInfo("输入法重启失败！");
 		
 		transModel.initSettings();
 		

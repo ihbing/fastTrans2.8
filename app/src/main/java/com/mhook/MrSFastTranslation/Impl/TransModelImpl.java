@@ -43,7 +43,7 @@ public class TransModelImpl implements TransModel
 			
 		}
 		
-		return AppUtils.killApp(MyApplication.getContext(),onInputPkgName);
+		return AppUtils.reStartApp(MyApplication.getContext(),onInputPkgName);
 		
 	}
 

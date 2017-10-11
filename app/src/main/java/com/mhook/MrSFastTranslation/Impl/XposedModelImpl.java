@@ -800,7 +800,7 @@ public class XposedModelImpl implements XposedModel,IXposedHookLoadPackage
 		}catch(Throwable t){
 			
 			
-			Utils.printf("fix toast error:"+t.getMessage());
+			//Utils.printf("fix toast error:"+t.getMessage());
 			
 		}
 
