@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mhook.MrSFastTranslation"
-    android:versionCode="41"
-    android:versionName="2.8.1-Debug" >
+    android:versionCode="2821"
+    android:versionName="2.8.2.1-Debug" >
 
     <uses-sdk 
         android:minSdkVersion="14" 

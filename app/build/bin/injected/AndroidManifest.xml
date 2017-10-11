@@ -2,8 +2,8 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.mhook.MrSFastTranslation"
-	android:versionCode="50"
-	android:versionName="2.8.2-debug">
+	android:versionCode="2821"
+	android:versionName="2.8.2.1-debug">
 
 	<uses-sdk
 		android:minSdkVersion="14"

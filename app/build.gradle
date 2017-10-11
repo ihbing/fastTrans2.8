@@ -9,8 +9,8 @@ android {
         minSdkVersion 14
         targetSdkVersion 21
 
-        versionCode 50
-        versionName "2.8.2-debug"
+        versionCode 2821
+        versionName "2.8.2.1-debug"
 
         compileOptions {
           //  sourceCompatibility JavaVersion.VERSION_1_8

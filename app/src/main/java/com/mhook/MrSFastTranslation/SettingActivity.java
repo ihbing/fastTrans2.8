@@ -228,7 +228,7 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 	{
 		// TODO: Implement this method
 		
-		AlertUtils.OneBtnAlert(this, "提示", "当前设置需要重启输入法才能生效", "重启输入法(root)", new DialogInterface.OnClickListener(){
+		AlertUtils.OneBtnAlert(this, "提示", "当前设置需要停止输入法并手动重启后才能生效", "停止输入法(root)", new DialogInterface.OnClickListener(){
 
 				@Override
 				public void onClick(DialogInterface p1, int p2)

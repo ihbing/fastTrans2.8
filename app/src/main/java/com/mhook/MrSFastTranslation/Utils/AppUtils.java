@@ -56,9 +56,34 @@ public class AppUtils
 		return buffer.toString();
 	}
 	
+	/*强制关闭应用*/
+	
+	public static Boolean killApp(Context con,String pkgname){
+		
+		try { // get superuser
+			Process su = Runtime.getRuntime().exec("su");
+			if (su == null)
+				return false;
+			DataOutputStream os = new DataOutputStream(su.getOutputStream());
+			os.writeBytes("am force-stop " + pkgname+ "\n");
+			os.writeBytes("exit\n");
+			su.waitFor();
+			os.close();
+
+		} catch (Throwable e) {
+			e.printStackTrace();
+
+			return false;
+
+		}
+
+		return true;
+		
+	}
+	
 	/*强制重启其他应用*/
 
-	public static Boolean ReStartApp(Context con,String pkgname){
+	public static Boolean reStartApp(Context con,String pkgname){
 
 		try { // get superuser
 			Process su = Runtime.getRuntime().exec("su");
