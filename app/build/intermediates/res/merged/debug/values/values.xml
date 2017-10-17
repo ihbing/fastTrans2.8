@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="swh_show_turn_trans_btn">显示转日韩按钮</string>
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light"/>
+</resources>

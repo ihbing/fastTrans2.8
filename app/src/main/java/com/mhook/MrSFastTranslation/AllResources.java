@@ -5,7 +5,7 @@ public class AllResources
 	
 	public static String pkgname=AllResources.class.getPackage().getName(),
 	
-	ApkVersion="V2.8.2.1-debug",
+	ApkVersion="V2.8.4-debug",
 	
 	sharename="fyXposed",
 	

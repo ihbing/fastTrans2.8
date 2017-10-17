@@ -163,30 +163,25 @@ public class XposedViewImpl implements OnTouchListener,XposedView
 			
 			textvShowFanyiStr.getBackground().setAlpha(showTransparency);
 
-			for(int i=0;i<((LinearLayout)viewBottomBtn).getChildCount();i++){
-
-
-				((LinearLayout)viewBottomBtn).getChildAt(i).getBackground().setAlpha(showTransparency);
-
-				((LinearLayout)viewBottomBtn).getChildAt(i).setEnabled(isClickAbled);
-				
+			if(isShowBottomBtn) {
+				for (int i = 0; i < ((LinearLayout) viewBottomBtn).getChildCount(); i++) {
+					((LinearLayout) viewBottomBtn).getChildAt(i).getBackground().setAlpha(showTransparency);
+					((LinearLayout) viewBottomBtn).getChildAt(i).setEnabled(isClickAbled);
+				}
 			}
-			
 
 			setDelay(showTime);
 
 			if(fanyiData.length()>100)textvShowFanyiStr.setTextSize(12);
 
 			mWindowManager.addView(mKqwToast, mParams);
-			
+
 			isShowing=true;
 
 		}catch(Throwable t){
-			
-			AlertUtils.Alert(mContext,AppUtils.getStackTrace(t));
+			Utils.printf(AppUtils.getStackTrace(t));
 
 			T.ShowToast(mContext,fanyiData);
-			
 		}
 		
 	}
@@ -317,25 +312,18 @@ public class XposedViewImpl implements OnTouchListener,XposedView
 		textvShowFanyiStr.setText(""+strFanyi);
 		
 		if(isClickAbled)textvShowFanyiStr.setOnTouchListener(this);
-		
 		mLinearLayout.addView(textvShowFanyiStr);
-		
+
 		if(!isShowBottomBtn){
-		
 		Utils.printf("显示底部按钮:否");
-		
+		Utils.printf("全部窗口创建成功");
 		return mLinearLayout;
-		
 		}
 
 		Utils.printf("显示底部按钮:是");
-		
 		viewBottomBtn=layUtils.addlinearLay(mContext);
-		
 		mLinearLayout.addView(viewBottomBtn);
-
 		Utils.printf("全部窗口创建成功");
-
 		return mLinearLayout;
 
 	}

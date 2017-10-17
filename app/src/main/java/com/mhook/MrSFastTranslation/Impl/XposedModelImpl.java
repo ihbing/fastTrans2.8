@@ -33,7 +33,7 @@ public class XposedModelImpl implements XposedModel,IXposedHookLoadPackage
 
 		}catch(Throwable t){
 
-			return 3;
+			return 225;
 
 		}
 	}
@@ -687,6 +687,29 @@ public class XposedModelImpl implements XposedModel,IXposedHookLoadPackage
 	}
 
 	@Override
+	public boolean getIsShowTurnTransBtn() {
+
+		XJsonRW.JObject xJObject=XJsonRW.JObject.getInstance();
+
+		boolean result=true;
+
+		try {
+
+			result= xJObject.getBoolean(TransModelImpl.jsonIsShowTurnTransBtn);
+			xJObject.freed();
+			return result;
+
+		} catch (JSONException e) {
+
+			Utils.printf("出现读取数据错误：" + e.toString());
+
+		}
+
+		return true;
+
+	}
+
+	@Override
 	public void hookXposedActive(XC_LoadPackage.LoadPackageParam lpparam)
 	{
 		// TODO: Implement this method
@@ -779,7 +802,7 @@ public class XposedModelImpl implements XposedModel,IXposedHookLoadPackage
 					WindowManager.LayoutParams lyparams=(WindowManager.LayoutParams)param.args[0];
 					if (lyparams.type == WindowManager.LayoutParams.TYPE_TOAST)
 					{
-						lyparams.type = 2;
+						lyparams.type =WindowManager.LayoutParams.TYPE_APPLICATION;
 					}
 				}
 

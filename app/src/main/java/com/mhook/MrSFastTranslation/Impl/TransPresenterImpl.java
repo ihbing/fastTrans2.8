@@ -142,8 +142,6 @@ public class TransPresenterImpl implements TransPresenter
 		//处理激活
 
 		transView.setXposedActiveLayout(transModel.isXposedActive());
-		
-		
 
 		transView.setModuleEnabled(transModel.isModuleEnabled());
 
@@ -167,9 +165,9 @@ public class TransPresenterImpl implements TransPresenter
 		
 		transView.setStrBlackList(""+transModel.getStrBlackList());
 
-		//调试
-		
-		transView.setDebugMode(transModel.isDebugMode());
+		transView.setDebugMode(transModel.isDebugMode());//调试
+
+		transView.setIsShowTurnTransBtn(transModel.getIsShowTurnTransBtn());//显示转日韩按钮
 
 	}
 
@@ -213,9 +211,15 @@ public class TransPresenterImpl implements TransPresenter
 	{
 		// TODO: Implement this method
 		
-		if(!p1.isPressed())return;
+		if(!p1.isPressed())return;//过滤非人为改变
 		
 		switch(p1.getId()){
+
+			case R.id.main_swh_show_turn_trans_btn:
+
+				transModel.setIsShowTurnTransBtn(p2);
+
+				break;
 
 			case R.id.main_swh_hide_icon:
 

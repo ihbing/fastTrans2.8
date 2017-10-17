@@ -2,6 +2,10 @@ package com.mhook.MrSFastTranslation.mvp;
 
 public interface TransView
 {
+
+	void setIsShowTurnTransBtn(boolean isShowBtn);
+
+	Boolean getIsShowTurnTransBtn();
 	
 	void showError(String msg);
 	

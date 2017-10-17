@@ -2,6 +2,10 @@ package com.mhook.MrSFastTranslation.mvp;
 
 public interface TransModel
 {
+
+	void setIsShowTurnTransBtn(boolean isShowBtn);
+
+	Boolean getIsShowTurnTransBtn();
 	
 	void saveSettings();
 	

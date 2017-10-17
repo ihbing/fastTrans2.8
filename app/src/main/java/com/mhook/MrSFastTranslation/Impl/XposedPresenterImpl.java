@@ -123,7 +123,7 @@ public class XposedPresenterImpl implements XposedPresenter
 					
 					xpView.createWindow(con,windowX,windowY);
 					
-					xpView.setIsShowBottomBtn(true);
+					xpView.setIsShowBottomBtn(xpModel.getIsShowTurnTransBtn());
 					
 					xpView.setWindowIsClickAbled(true);
 					

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\android-project-forAS\\xposed-project\\fastTrans\\app\\build\\intermediates\\res\\merged\\debug\\layout\\show_time_setting.xml",
+        "source": "E:\\android-project-forAS\\xposed-project\\fastTrans\\app\\src\\main\\res\\layout\\show_time_setting.xml"
+    },
+    {
+        "merged": "E:\\android-project-forAS\\xposed-project\\fastTrans\\app\\build\\intermediates\\res\\merged\\debug\\layout\\show_transparency_setting.xml",
+        "source": "E:\\android-project-forAS\\xposed-project\\fastTrans\\app\\src\\main\\res\\layout\\show_transparency_setting.xml"
+    },
+    {
+        "merged": "E:\\android-project-forAS\\xposed-project\\fastTrans\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mainsetting.xml",
+        "source": "E:\\android-project-forAS\\xposed-project\\fastTrans\\app\\src\\main\\res\\layout\\mainsetting.xml"
+    }
+]

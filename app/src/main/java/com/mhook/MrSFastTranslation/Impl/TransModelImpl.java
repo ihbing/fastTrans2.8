@@ -66,6 +66,7 @@ public class TransModelImpl implements TransModel
 	}
 
 
+
 	private int showWindowTime=3;
 	
 	private int showWindowTransparency=50;
@@ -85,6 +86,8 @@ public class TransModelImpl implements TransModel
 	private boolean isPayed=false;
 	
 	private boolean isScored=false;
+
+	private boolean isShowTurnTransBtn=true;
 	
 	private String strBlackList="[%@&#$],％,＆,＄,＃";
 	
@@ -115,6 +118,8 @@ public class TransModelImpl implements TransModel
 	public static String prefOnInputPkgName="onInputPkgName";
 	
 	public static String jsonShowWindowTransparency="showWindowTransparency";
+
+	public static String jsonIsShowTurnTransBtn="isShowTurnTransBtn";
 	
 	private String prefIsPayed="isPayed";
 	
@@ -170,6 +175,8 @@ public class TransModelImpl implements TransModel
 		showWindowTime=jObject.getInt(jsonShowWindowTime);
 		
 		showWindowTransparency=jObject.getInt(jsonShowWindowTransparency);
+
+		isShowTurnTransBtn=jObject.getBoolean(jsonIsShowTurnTransBtn);
 		
 		}catch(Throwable t){
 			
@@ -311,8 +318,13 @@ try{
 		return false;
 	}
 
-	
-	
+
+	@Override
+	public void setIsShowTurnTransBtn(boolean isShowBtn) {this.isShowTurnTransBtn=isShowBtn;}
+
+	@Override
+	public Boolean getIsShowTurnTransBtn() {return this.isShowTurnTransBtn;}
+
 	@Override
 	public void saveSettings()
 	{
@@ -365,6 +377,8 @@ try{
 		jObject.put(jsonEdtBlackList,strBlackList);
 		
 		jObject.put(jsonShowWindowTransparency,showWindowTransparency);
+
+		jObject.put(jsonIsShowTurnTransBtn,isShowTurnTransBtn);
 		
 		jObject.save();
 		

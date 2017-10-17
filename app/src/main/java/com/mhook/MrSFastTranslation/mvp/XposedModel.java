@@ -6,6 +6,8 @@ import com.mhook.MrSFastTranslation.Impl.*;
 
 public interface XposedModel
 {
+
+	boolean getIsShowTurnTransBtn();
 	
 	void hookXposedActive( final XC_LoadPackage.LoadPackageParam lpparam);
 	

@@ -280,19 +280,10 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 	}
 	
 	@Override
-	public void onItemSelected(AdapterView<?> p1, View p2, int p3, long p4)
-	{
-		// TODO: Implement this method
-		
-		transPresenter.onItemSelectInput(arrayInputPkgNmae.get(p3));
-		
-	}
+	public void onItemSelected(AdapterView<?> p1, View p2, int p3, long p4) {transPresenter.onItemSelectInput(arrayInputPkgNmae.get(p3));}
 
 	@Override
-	public void onNothingSelected(AdapterView<?> p1)
-	{
-		// TODO: Implement this method
-	}
+	public void onNothingSelected(AdapterView<?> p1){}
 	
 	@Override
 	public void showShowTimeSettingAlert()
@@ -463,112 +454,46 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 	}
 
 	@Override
-	public void setModuleEnabled(boolean status)
-	{
-		// TODO: Implement this method
-		
-		swhModuleEnabled.setChecked(status);
-		
-	}
+	public void setModuleEnabled(boolean status) {swhModuleEnabled.setChecked(status);}
 
 	@Override
-	public void setHideIcon(boolean bool)
-	{
-		// TODO: Implement this method
-		
+	public void setHideIcon(boolean bool) {
+
 		if(bool){AppUtils.HideApkIcon(this);}else{AppUtils.ShowApkIcon(this);}
-		
+
 		swhHideIcon.setChecked(bool);
 
-		}
+	}
 
 	@Override
-	public void setBrightTheme(boolean bool)
-	{
-		// TODO: Implement this method
-		
-		swhBrightTheme.setChecked(bool);
-		
-	}
+	public void setBrightTheme(boolean bool) {swhBrightTheme.setChecked(bool);}
 	
 	@Override
-	public void setWhiteListEnabled(boolean bool)
-	{
-		// TODO: Implement this method
-		
-		swhWhiteListEnabled.setChecked(bool);
-		
-	}
+	public void setWhiteListEnabled(boolean bool) {swhWhiteListEnabled.setChecked(bool);}
 
 	@Override
-	public void setStrWhiteList(String StrWhiteList)
-	{
-		// TODO: Implement this method
-		
-		edtWhiteList.setText(StrWhiteList);
-		
-	}
+	public void setStrWhiteList(String StrWhiteList) {edtWhiteList.setText(StrWhiteList);}
 
 	@Override
-	public void setStrBlackList(String strBlackList)
-	{
-		// TODO: Implement this method
-		
-		edtBlackList.setText(strBlackList);
-		
-	}
+	public void setStrBlackList(String strBlackList) {edtBlackList.setText(strBlackList);}
 
 	@Override
-	public void setBlackListEnabled(boolean bool)
-	{
-		// TODO: Implement this method
-		
-		swhBlackListEnabled.setChecked(bool);
-		
-	}
-
-	
-	@Override
-	public void setDebugMode(boolean bool)
-	{
-		// TODO: Implement this method
-		
-		swhDebugModeEnabled.setChecked(bool);
-		
-	}
+	public void setBlackListEnabled(boolean bool) {swhBlackListEnabled.setChecked(bool);}
 
 	@Override
-	public Boolean isPayed()
-	{
-		// TODO: Implement this method
-		return isPayed;
-	}
+	public void setDebugMode(boolean bool) {swhDebugModeEnabled.setChecked(bool);}
 
 	@Override
-	public void setPayed(boolean bool)
-	{
-		// TODO: Implement this method
-		
-		isPayed=bool;
-		
-	}
+	public Boolean isPayed() {return isPayed;}
 
 	@Override
-	public Boolean isScored()
-	{
-		// TODO: Implement this method
-		return isScored;
-	}
+	public void setPayed(boolean bool) {isPayed=bool;}
 
 	@Override
-	public void setScored(boolean bool)
-	{
-		// TODO: Implement this method
-		
-		isScored=bool;
-		
-	}
+	public Boolean isScored() {return isScored;}
 
+	@Override
+	public void setScored(boolean bool) {isScored=bool;}
 
 	@Override
 	public void setXposedActiveLayout(boolean isHideLayout)
@@ -603,22 +528,11 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 		
 	}
 
+	@Override
+	public String getStrWhiteList() {return edtWhiteList.getText().toString();}
 
 	@Override
-	public String getStrWhiteList()
-	{
-		// TODO: Implement this method
-		return edtWhiteList.getText().toString();
-	}
-
-	@Override
-	public String getStrBlackList()
-	{
-		// TODO: Implement this method
-		return edtBlackList.getText().toString();
-		
-	}
-
+	public String getStrBlackList() {return edtBlackList.getText().toString();}
 
 	@Override
 	public void setWhiteListLayout(boolean isShowLayout)
@@ -662,46 +576,25 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 
 
 	@Override
-	public void onCheckedChanged(CompoundButton p1, boolean p2)
-	{
-		// TODO: Implement this method
-		
-		transPresenter.onCheckedChanged(p1,p2);
-		
-	}
-
+	public void onCheckedChanged(CompoundButton p1, boolean p2) {transPresenter.onCheckedChanged(p1,p2);}
 
 	@Override
-	public void onProgressChanged(SeekBar p1, int p2, boolean p3)
-	{
-		// TODO: Implement this method
-		
-		transPresenter.onProgressChanged(p1,p2,p3);
-		
-	}
+	public void onProgressChanged(SeekBar p1, int p2, boolean p3) {transPresenter.onProgressChanged(p1,p2,p3);}
 
 	@Override
-	public void onStartTrackingTouch(SeekBar p1)
-	{
-		// TODO: Implement this method
-	}
+	public void onStartTrackingTouch(SeekBar p1){}
 
 	@Override
-	public void onStopTrackingTouch(SeekBar p1)
-	{
-		// TODO: Implement this method
-	}
-
+	public void onStopTrackingTouch(SeekBar p1) {}
 
 	@Override
-	public void onClick(View p1)
-	{
-		// TODO: Implement this method
-		
-		transPresenter.onClicked(p1);
-		
-	}
+	public void onClick(View p1) {transPresenter.onClicked(p1);}
 
+	@Override
+	public void setIsShowTurnTransBtn(boolean isShowBtn) {swhShowTurnTransBtn.setChecked(isShowBtn);}
+
+	@Override
+	public Boolean getIsShowTurnTransBtn() {return swhShowTurnTransBtn.isChecked();}
 
 	@Override
 	public void showError(String msg)
@@ -849,6 +742,8 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 	private Switch swhBlackListEnabled;
 	
 	private Switch swhDebugModeEnabled;
+
+	private Switch swhShowTurnTransBtn;
 	
 	private Spinner spnnInput;
 	
@@ -871,8 +766,10 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 		transPresenter=new TransPresenterImpl(this);
 		
 		this.xpView=new XposedViewImpl(this);
+
+		if(BuildConfig.VERSION_CODE>19){setTheme(transPresenter.isBrightTheme()?android.R.style.Theme_Material_Light:android.R.style.Theme_Material);}else {
 		
-		setTheme(transPresenter.isBrightTheme()?android.R.style.Theme_Holo_Light:android.R.style.Theme_Holo);
+		setTheme(transPresenter.isBrightTheme()?android.R.style.Theme_Holo_Light:android.R.style.Theme_Holo);}
 		
 		setContentView(R.layout.mainsetting);
 		
@@ -923,6 +820,8 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 		swhBlackListEnabled=(Switch)findViewById(R.id.main_swh_black_list_enabled);
 		
 		swhDebugModeEnabled=(Switch)findViewById(R.id.main_swh_debug_mode_enabled);
+
+		swhShowTurnTransBtn=(Switch)findViewById(R.id.main_swh_show_turn_trans_btn);
 		
 		spnnInput=(Spinner)findViewById(R.id.main_spinner_select_input);
 		
@@ -957,6 +856,8 @@ public class SettingActivity extends Activity implements TransView,OnClickListen
 		swhBlackListEnabled.setOnCheckedChangeListener(this);
 		
 		swhDebugModeEnabled.setOnCheckedChangeListener(this);
+
+		swhShowTurnTransBtn.setOnCheckedChangeListener(this);
 		
 		spnnInput.setOnItemSelectedListener(this);
 		

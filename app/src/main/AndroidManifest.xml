@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mhook.MrSFastTranslation"
-    android:versionCode="2821"
-    android:versionName="2.8.2.1-Debug" >
+    android:versionCode="2840"
+    android:versionName="2.8.4-Debug" >
 
     <uses-sdk 
         android:minSdkVersion="14" 
         android:targetSdkVersion="21" />
 
     <application
+		android:theme="@style/AppTheme"
 		android:label="Xp快译"
 		android:icon="@drawable/icon"
 		android:name=".MyApplication"
@@ -22,8 +23,7 @@
 			<category android:name="de.robv.android.xposed.category.MODULE_SETTINGS"/>
 
 		</intent-filter>
-		
-		
+
 		</activity>
 		<activity-alias
 			android:name=".SettingActivity-alias"
